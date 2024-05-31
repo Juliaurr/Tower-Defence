@@ -7,9 +7,9 @@ public class Turret : MonoBehaviour
 {
     public float targetRange = 5f;
     private Transform target;
-    private LayerMask enemyMask;
-    private GameObject bulletPrefab;
-    private Transform firingPoint;
+    public LayerMask enemyMask;
+    public GameObject bulletPrefab;
+    public Transform firingPoint;
     private float bulletsPerSecond = 1f;
     private float timeUntilFire;
 
@@ -26,7 +26,6 @@ public class Turret : MonoBehaviour
             FindTarget();
             return;
         }
-
         if (!CheckTargetRange())
         {
             target = null;
@@ -45,7 +44,9 @@ public class Turret : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("Shoot");
+        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        Bullet bulletScript = bulletObj.GetComponent<Bullet>();
+        bulletScript.SetTarget(target);
     }
 
     private bool CheckTargetRange()
@@ -55,7 +56,7 @@ public class Turret : MonoBehaviour
 
     private void FindTarget()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetRange, (Vector2) transform.position, 0f, enemyMask);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetRange, transform.position, 0f, enemyMask);
 
         if (hits.Length > 0)
         {
