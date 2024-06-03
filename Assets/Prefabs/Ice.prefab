@@ -99,6 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRange: 5
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 64
   bulletPrefab: {fileID: 7456288269049728479, guid: dc23a36502adf4640831d4f55a505233, type: 3}
   firingPoint: {fileID: 4661139077007380444}
 --- !u!1 &5831324207246676107

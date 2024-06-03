@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int hitPoints = 2;
+    private bool isDestroyed = false;
+    private int currencyWorth = 50;
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int damage)
     {
-        
+        hitPoints -= damage;
+
+        if (hitPoints <= 0 && !isDestroyed)
+        {
+            EnemySpawn.enemyKilled.Invoke();
+            LevelManager.main.IncreaseCurrency(currencyWorth);
+            isDestroyed = true;
+            Destroy(gameObject);
+        }
     }
 }

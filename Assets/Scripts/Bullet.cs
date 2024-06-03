@@ -7,13 +7,8 @@ public class Bullet : MonoBehaviour
     private Transform target;
     public float bulletSpeed = 5f;
     public Rigidbody2D rb;
-
-    void Start()
-    {
-        
-    }
-
-    
+    public int bulletDamage = 1;
+ 
     private void FixedUpdate()
     {
         if (!target)
@@ -27,6 +22,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
+        if (other.gameObject.TryGetComponent(out Health health))
+        {
+            health.TakeDamage(bulletDamage);
+        }
         Destroy(gameObject);
     }
 
