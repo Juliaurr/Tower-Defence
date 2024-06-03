@@ -6,6 +6,14 @@ using TMPro;
 public class Menu : MonoBehaviour
 {
     public TextMeshProUGUI currencyUI;
+    public Animator animator;
+    private bool isShopOpen = true;
+
+    public void ToggleShop() 
+    {
+        isShopOpen = !isShopOpen;
+        animator.SetBool("ShopOpen", isShopOpen);
+    }
     
     private void OnGUI() 
     {
