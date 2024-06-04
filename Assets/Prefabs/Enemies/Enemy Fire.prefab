@@ -290,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 754314123409208657}
   element: 0
+  popUpTextPrefab: {fileID: 7742827707567399939, guid: 557004cb09c6dd74399ddf506a756545, type: 3}
 --- !u!1 &4900115958743022866
 GameObject:
   m_ObjectHideFlags: 0

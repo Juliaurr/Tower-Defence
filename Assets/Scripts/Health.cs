@@ -10,15 +10,18 @@ public class Health : MonoBehaviour
     private bool isDestroyed = false;
     private int currencyWorth = 50;
     public TurretElement element;
+    public GameObject popUpTextPrefab;
 
     public void TakeDamage(int damage, TurretElement turretelement)
     {
-        if (element == turretelement) return;
+        if (element == turretelement)
+        {
+            Instantiate(popUpTextPrefab, transform);
+            return;
+        }
 
         switch (turretelement)
         {
-            
-
             case TurretElement.Fire:
             if (element == TurretElement.Water || element == TurretElement.Ice)
             {
@@ -40,6 +43,7 @@ public class Health : MonoBehaviour
             }
             break;
             case TurretElement.Ice:
+            GetComponent<EnemyMovement>().ApplySlowdown(0.5f, 2);
             hitPoints -= damage;
             break;
             case TurretElement.Earth:
