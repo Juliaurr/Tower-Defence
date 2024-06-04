@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+public enum TurretElement
+{
+    Fire, Water, Ice, Earth
+};
+
 public class Turret : MonoBehaviour
 {
     public float targetRange = 5f;
@@ -12,6 +17,7 @@ public class Turret : MonoBehaviour
     public Transform firingPoint;
     private float bulletsPerSecond = 1f;
     private float timeUntilFire;
+    public TurretElement element;
 
     private void OnDrawGizmosSelected() 
     {
@@ -46,6 +52,7 @@ public class Turret : MonoBehaviour
     {
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
+        bulletScript.element = element;
         bulletScript.SetTarget(target);
     }
 

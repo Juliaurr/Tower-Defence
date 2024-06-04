@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed = 5f;
     public Rigidbody2D rb;
     public int bulletDamage = 1;
+    [HideInInspector] public TurretElement element;
  
     private void FixedUpdate()
     {
@@ -24,7 +25,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Health health))
         {
-            health.TakeDamage(bulletDamage);
+            health.TakeDamage(bulletDamage, element);
         }
         Destroy(gameObject);
     }
