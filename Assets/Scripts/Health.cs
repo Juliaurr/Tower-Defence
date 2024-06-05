@@ -6,13 +6,19 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public Slider slider;
-    private int hitPoints = 2;
+    public float hitPoints;
+    public float maxHitPoints = 2;
     private bool isDestroyed = false;
     private int currencyWorth = 50;
     public TurretElement element;
     public GameObject popUpTextPrefab;
 
-    public void TakeDamage(int damage, TurretElement turretelement)
+    void Start()
+    {
+        hitPoints = maxHitPoints;
+    }
+
+    public void TakeDamage(float damage, TurretElement turretelement)
     {
         if (element == turretelement)
         {
@@ -43,13 +49,14 @@ public class Health : MonoBehaviour
             }
             break;
             case TurretElement.Ice:
-            GetComponent<EnemyMovement>().ApplySlowdown(0.5f, 2);
             hitPoints -= damage;
             break;
             case TurretElement.Earth:
             hitPoints -= damage;
             break;
         }
+        
+        UpdateHealthBar(hitPoints, maxHitPoints);
 
         if (hitPoints <= 0 && !isDestroyed)
         {

@@ -41,21 +41,9 @@ public class EnemyMovement : MonoBehaviour
         rb.velocity = direction * moveSpeed;
     }
 
-    public void ApplySlowdown(float slowdownFactor, float duration)
+    public void UpdateSpeed(float newSpeed)
     {
-        // Reduce the speed of the enemy by the slowdown factor
-        moveSpeed *= slowdownFactor;
-
-        // Start coroutine to reset the speed after the specified duration
-        StartCoroutine(ResetSpeedAfterDelay(duration));
-    }
-
-    private IEnumerator ResetSpeedAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        // Reset the speed of the enemy to its normal speed
-        ResetSpeed();
+        moveSpeed = newSpeed;
     }
 
     public void ResetSpeed()
