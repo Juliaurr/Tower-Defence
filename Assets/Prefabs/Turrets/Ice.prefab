@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3006646759978709237}
   - component: {fileID: 7969458022113207048}
   - component: {fileID: 4298099164795010674}
-  - component: {fileID: 4855754492909171053}
   m_Layer: 0
   m_Name: Ice
   m_TagString: Untagged
@@ -28,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 1029000085186459412}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.5, y: 3.07, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4661139077007380444}
@@ -76,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 1136090829
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5a82f7532e5f5d74c84cd05d26686281, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ef878290383d8e4bb3aa35912c3936f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,24 +105,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7456288269049728479, guid: dc23a36502adf4640831d4f55a505233, type: 3}
   firingPoint: {fileID: 4661139077007380444}
   element: 2
---- !u!114 &4855754492909171053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029000085186459412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8ba207e84c72b84c8d8952224ad5aae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freezeDuration: 3
-  slowdownFactor: 0.5
-  range: 5
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!1 &5831324207246676107
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 5831324207246676107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0343, y: 0.698, z: 0}
+  m_LocalPosition: {x: 0.0144, y: 0.3435, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

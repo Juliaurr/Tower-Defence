@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5000790368221144851}
   - component: {fileID: 6734248820847174553}
   - component: {fileID: -2212074343605302705}
-  - component: {fileID: 4982918714157723735}
   m_Layer: 6
   m_Name: Enemy Water
   m_TagString: Untagged
@@ -32,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4639513205070482362}
@@ -79,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1302205499, guid: f9c724a39127a1e48a01ce0bd15b62a0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 0.040607452, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -178,32 +177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3cc339753da064d8795d879c62856d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 0}
+  slider: {fileID: 8895554445072675114}
   hitPoints: 0
   maxHitPoints: 4
   element: 1
   popUpTextPrefab: {fileID: 7742827707567399939, guid: 557004cb09c6dd74399ddf506a756545, type: 3}
---- !u!95 &4982918714157723735
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4325063714219538570}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e5f14c7c3dcfd84187ec26650dfee2c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4175940246539810914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,3 +296,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8759843406705259480, guid: abc6523cb4627c7419ddaf9174eaae11, type: 3}
   m_PrefabInstance: {fileID: 4175940246539810914}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8895554445072675114 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4792023674015648072, guid: abc6523cb4627c7419ddaf9174eaae11, type: 3}
+  m_PrefabInstance: {fileID: 4175940246539810914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
