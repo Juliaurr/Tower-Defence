@@ -80,7 +80,6 @@ public class BuildManager : MonoBehaviour
             int refundAmount = Mathf.RoundToInt(tower.cost * 0.5f);
             LevelManager.main.IncreaseCurrency(refundAmount);
             Destroy(plot.GetTowerGameObject());
-            //plot.SetTower(null);
             Debug.Log($"Sold tower at plot for {refundAmount} currency.");
             towerCount--;
         }
@@ -88,6 +87,5 @@ public class BuildManager : MonoBehaviour
         {
             Debug.Log("No tower at plot to sell.");
         }
-
     }
 }
