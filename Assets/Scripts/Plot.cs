@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Plot : MonoBehaviour
 {
     private GameObject tower;
+    private Tower towerOnPlot;
     public SpriteRenderer sr;
     private Color startColor;
     public Color hoverColor;
-    
+
     private void Start() 
     {
         startColor = sr.color;
@@ -28,6 +30,11 @@ public class Plot : MonoBehaviour
     {
         if (tower != null)
         {
+            Vector3 mousePosition = Input.mousePosition;
+            if (BuildManager.main.towerCount >= 2)
+            {
+                ContextMenu.Instance.ShowMenu(this, mousePosition);
+            }
             return;
         }
 
@@ -41,5 +48,26 @@ public class Plot : MonoBehaviour
         LevelManager.main.SpendCurrency(towerToBuild.cost);
 
         tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        towerOnPlot = towerToBuild;
+        BuildManager.main.towerCount++;
+    }
+
+    public void SetTower(GameObject newTower)
+    {
+        if (tower != null)
+        {
+            Destroy(tower);
+        }
+        tower = newTower;
+    }
+
+    public GameObject GetTowerGameObject()
+    {
+        return tower;
+    }
+
+    public Tower GetTowerClass()
+    {
+        return towerOnPlot;
     }
 }
