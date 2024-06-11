@@ -528,6 +528,7 @@ MonoBehaviour:
   - {fileID: 4325063714219538570, guid: b6fbe693a20c61e48a217f395d9becda, type: 3}
   - {fileID: 4325063714219538570, guid: d9a1ca311b6bca3448a59298e79d2274, type: 3}
   - {fileID: 4325063714219538570, guid: 9528350a6ace9b34c82b0a007b428192, type: 3}
+  - {fileID: 4325063714219538570, guid: 05eaa1933c8065c4a81fc780388ebccd, type: 3}
   baseEnemies: 8
   enemiesPerSecond: 0.5
   timeBetweenWaves: 3
@@ -1618,7 +1619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 117.8, y: -53.6}
+  m_AnchoredPosition: {x: 117.799805, y: -53.6}
   m_SizeDelta: {x: 105, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761163532
@@ -3801,7 +3802,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 90.4}
+  m_AnchoredPosition: {x: 0, y: 90.3999}
   m_SizeDelta: {x: 0, y: 189.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515075259
