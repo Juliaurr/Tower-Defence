@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9c724a39127a1e48a01ce0bd15b62a0
+guid: d465e5323e017014b9dde663503127c4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,106 +123,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: watersprite_0
+      name: iceenemy_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 52
-        width: 64
-        height: 47
+        x: 0
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cfc97bbef223e4458c2cfac0e5f6f4e
-      internalID: 1302205499
+      spriteID: 56acf41f9d5ae5f4c9d9898843a5501d
+      internalID: 604650112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: watersprite_1
+      name: iceenemy_1
       rect:
         serializedVersion: 2
-        x: 196
-        y: 54
-        width: 59
-        height: 44
+        x: 200
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73410e93906a18142ade01bd756c2f82
-      internalID: 1431167695
+      spriteID: d05d281c48b5a5c4b9097e3b08a03577
+      internalID: 974091562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: watersprite_2
+      name: iceenemy_2
       rect:
         serializedVersion: 2
-        x: 345
-        y: 52
-        width: 59
-        height: 44
+        x: 400
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 415db91cd8746ca48beb51be111761c9
-      internalID: -77554696
+      spriteID: 90531074d050cba4f919f27a555196d1
+      internalID: 1349498254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: watersprite_3
+      name: iceenemy_3
       rect:
         serializedVersion: 2
-        x: 494
-        y: 53
-        width: 64
-        height: 51
+        x: 600
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40f36857a8b1a2042b585410f322cdb1
-      internalID: 505897531
+      spriteID: 40dbce9fc8535d34faf71ae1d02b1681
+      internalID: 1381895430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: watersprite_4
+      name: iceenemy_4
       rect:
         serializedVersion: 2
-        x: 601
-        y: 9
-        width: 149
-        height: 132
+        x: 800
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e752e2650491ef4285ed0b745195cf3
-      internalID: -2045516771
+      spriteID: 8e9bf1847037b1847957b5641f10bb61
+      internalID: -1820396683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iceenemy_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf847650a09f9342bfa3d925193b77f
+      internalID: -1221032058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iceenemy_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ef563c5c652c94db88f7c4fee75555
+      internalID: -241609338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iceenemy_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf4015341ffb074aa74524cff4a57d5
+      internalID: -1392384645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iceenemy_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f79e86771728c40b24ac46d70f8d37
+      internalID: 739360855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iceenemy_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e217c5ca56789bb4bb71a424db2a814e
+      internalID: 1511609601
       vertices: []
       indices: 
       edges: []
@@ -238,11 +343,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      watersprite_0: 1302205499
-      watersprite_1: 1431167695
-      watersprite_2: -77554696
-      watersprite_3: 505897531
-      watersprite_4: -2045516771
+      iceenemy_0: 604650112
+      iceenemy_1: 974091562
+      iceenemy_2: 1349498254
+      iceenemy_3: 1381895430
+      iceenemy_4: -1820396683
+      iceenemy_5: -1221032058
+      iceenemy_6: -241609338
+      iceenemy_7: -1392384645
+      iceenemy_8: 739360855
+      iceenemy_9: 1511609601
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
