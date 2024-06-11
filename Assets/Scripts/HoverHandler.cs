@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class HoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Info infoBox;  // Reference to the InfoBox script
-    public string itemInfo;  // Information to display when hovering
+    [TextArea(3, 10)]public string itemInfo;  // Information to display when hovering
 
     public void OnPointerEnter(PointerEventData eventData)
     {
