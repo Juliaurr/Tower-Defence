@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.040607452, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 345512705395364808}
-  moveSpeed: 2
+  moveSpeed: 1.5
 --- !u!114 &-2212074343605302705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +201,10 @@ PrefabInstance:
     - target: {fileID: 2466223750207367837, guid: abc6523cb4627c7419ddaf9174eaae11, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611965892615395003, guid: abc6523cb4627c7419ddaf9174eaae11, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8062788168379702439, guid: abc6523cb4627c7419ddaf9174eaae11, type: 3}
       propertyPath: m_PresetInfoIsWorld
