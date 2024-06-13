@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 5874945997773612857}
   hitPoints: 0
-  maxHitPoints: 4
+  maxHitPoints: 5
   element: 0
   popUpTextPrefab: {fileID: 7742827707567399939, guid: 557004cb09c6dd74399ddf506a756545, type: 3}
 --- !u!1001 &1371540040732192369
