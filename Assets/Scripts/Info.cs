@@ -22,7 +22,7 @@ public class Info : MonoBehaviour
         gameObject.SetActive(true);
 
         // Set the position directly
-        GetComponent<RectTransform>().position = position;
+        GetComponent<RectTransform>().position = new Vector3(position.x, position.y + 50, 0);
     }
 
     // Function to hide the info box

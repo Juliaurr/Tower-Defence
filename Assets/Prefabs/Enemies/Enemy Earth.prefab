@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5000790368221144851}
   - component: {fileID: 6734248820847174553}
   - component: {fileID: -2212074343605302705}
+  - component: {fileID: 834798280888317406}
   m_Layer: 6
   m_Name: Enemy Earth
   m_TagString: Untagged
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.05899556, g: 0.2735849, b: 0.011614448, a: 1}
+  m_Sprite: {fileID: 1182778584, guid: a785833873267264eb6c253b7cf73053, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,9 +149,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.008191764, y: -0.5174115}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.46522993
 --- !u!114 &6734248820847174553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +183,27 @@ MonoBehaviour:
   maxHitPoints: 5
   element: 3
   popUpTextPrefab: {fileID: 7742827707567399939, guid: 557004cb09c6dd74399ddf506a756545, type: 3}
+--- !u!95 &834798280888317406
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4325063714219538570}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 408d24c1a27307c40bd43d42ba0c5744, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &3627594699177933918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759843406705259480, guid: abc6523cb4627c7419ddaf9174eaae11, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.85
+      value: 0.535
       objectReference: {fileID: 0}
     - target: {fileID: 8759843406705259480, guid: abc6523cb4627c7419ddaf9174eaae11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
