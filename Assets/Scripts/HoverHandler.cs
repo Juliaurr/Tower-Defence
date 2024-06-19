@@ -10,19 +10,12 @@ public class HoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Calculate the position on top of the button
-       // Vector2 position = transform.position + new Vector3(0, GetComponent<RectTransform>().rect.height, 0);
-        
-        // Show the info box with the item info at the calculated position
-        //infoBox.ShowInfo(itemInfo, position);
         StopAllCoroutines();
         StartCoroutine(WaitTime(true));
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Hide the info box
-        //infoBox.HideInfo();
         StopAllCoroutines();
         StartCoroutine(WaitTime(false));
     }

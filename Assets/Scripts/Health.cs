@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
             case TurretElement.Fire:
             if (element == TurretElement.Water || element == TurretElement.Ice)
             {
-                hitPoints -= damage + 2;
+                hitPoints -= damage + 1;
             }
             else
             {
@@ -41,7 +41,7 @@ public class Health : MonoBehaviour
             case TurretElement.Water:
             if (element == TurretElement.Fire)
             {
-                hitPoints -= damage + 2;
+                hitPoints -= damage + 1;
             }
             else
             {

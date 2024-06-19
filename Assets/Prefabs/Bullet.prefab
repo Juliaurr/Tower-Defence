@@ -129,6 +129,7 @@ MonoBehaviour:
   bulletSpeed: 7
   rb: {fileID: 4849247422809566662}
   bulletDamage: 1
+  element: 0
 --- !u!58 &-4471940712042762977
 CircleCollider2D:
   m_ObjectHideFlags: 0
