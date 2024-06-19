@@ -31,7 +31,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level 1");
         Time.timeScale = 1f;
         isPaused = false;
         pauseMenu.SetActive(true);
