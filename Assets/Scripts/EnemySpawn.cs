@@ -12,11 +12,13 @@ public class EnemySpawn : MonoBehaviour
     public float enemiesPerSecond = 0.5f;
     public float timeBetweenWaves = 5f;
     public float difficultyScalingFactor = 0.75f;
+    public TextMeshProUGUI waveText; // Text element to display the wave progress
     private int currentWave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+    public int waveToShowDialogue = 5;
 
     private void Awake()
     {
@@ -26,6 +28,7 @@ public class EnemySpawn : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartWave());
+        UpdateWaveText();
     }
 
     private void Update()
@@ -58,7 +61,7 @@ public class EnemySpawn : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject prefabToSpawn = enemyPrefabs[Random.Range(0, 5)];
+        GameObject prefabToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
         Instantiate(prefabToSpawn, LevelManager.main.startPoint[0].position, Quaternion.identity);
     }
 
@@ -74,11 +77,29 @@ public class EnemySpawn : MonoBehaviour
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currentWave++;
+
+        // Update wave text
+        UpdateWaveText();
+
+        // Check if it's time to show the dialogue
+        if (currentWave == waveToShowDialogue)
+        {
+            Dialogue.instance.StartDialogue();
+        }
+
         StartCoroutine(StartWave());
     }
 
     private int EnemiesPerWave()
     {
         return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScalingFactor));
-    } 
+    }
+
+    private void UpdateWaveText()
+    {
+        if (waveText != null)
+        {
+            waveText.text = "Wave " + currentWave + "/" + waveToShowDialogue;
+        }
+    }
 }

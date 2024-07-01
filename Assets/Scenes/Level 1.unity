@@ -662,7 +662,7 @@ MonoBehaviour:
   - {fileID: 1175889746}
   - {fileID: 1286106925}
   - {fileID: 807683528}
-  currency: 100
+  currency: 10000
 --- !u!4 &148582852
 Transform:
   m_ObjectHideFlags: 0
@@ -696,10 +696,12 @@ MonoBehaviour:
   - {fileID: 4325063714219538570, guid: b6fbe693a20c61e48a217f395d9becda, type: 3}
   - {fileID: 4325063714219538570, guid: d9a1ca311b6bca3448a59298e79d2274, type: 3}
   - {fileID: 4325063714219538570, guid: 9528350a6ace9b34c82b0a007b428192, type: 3}
-  baseEnemies: 5
+  baseEnemies: 2
   enemiesPerSecond: 0.5
   timeBetweenWaves: 4
   difficultyScalingFactor: 0.75
+  waveText: {fileID: 227245559}
+  waveToShowDialogue: 5
 --- !u!114 &148582854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8613,6 +8615,7 @@ GameObject:
   - component: {fileID: 982455967}
   - component: {fileID: 982455971}
   - component: {fileID: 982455972}
+  - component: {fileID: 982455973}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8737,6 +8740,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1563752862}
   optionsMenu: {fileID: 64706573}
+--- !u!114 &982455973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982455966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09edf252d8c5ac42985baa4a8a347df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1603505584}
+  lines:
+  - The ground shakes as a massive shadow looms ahead...
+  - The final enemy stands between you and victory.
+  textSpeed: 0.1
+  dialogueBox: {fileID: 4148545445196925576}
 --- !u!1 &1004744721
 GameObject:
   m_ObjectHideFlags: 0
@@ -26125,7 +26146,6 @@ GameObject:
   - component: {fileID: 3813591282643568051}
   - component: {fileID: 6515464039767248055}
   - component: {fileID: 5383815804283677621}
-  - component: {fileID: 6515464039767248056}
   m_Layer: 5
   m_Name: TextBox Background
   m_TagString: Untagged
@@ -26312,22 +26332,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4148545445196925576}
   m_CullTransparentMesh: 1
---- !u!114 &6515464039767248056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4148545445196925576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a09edf252d8c5ac42985baa4a8a347df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 1603505584}
-  lines:
-  - test
-  textSpeed: 2
 --- !u!1 &6978160263660197733
 GameObject:
   m_ObjectHideFlags: 0

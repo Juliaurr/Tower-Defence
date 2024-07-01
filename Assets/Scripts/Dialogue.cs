@@ -9,28 +9,22 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
+    public static Dialogue instance;
+    public GameObject dialogueBox;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
         textComponent.text = string.Empty;
-        if (PlayerPrefs.GetInt("Dialogue") == 0)
-        {
-            StartDialogue();
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
-        PlayerPrefs.Save();
+        dialogueBox.SetActive(false);
     }
 
     void Update()
     {
-        if (PlayerPrefs.GetInt("Dialogue") != 0)
-        {
-            return;
-        }
-
         if (Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
@@ -45,15 +39,11 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void OnApplicationQuit() 
+    public void StartDialogue()
     {
-        PlayerPrefs.SetInt("Dialogue", 0);
-        PlayerPrefs.Save();
-    }
-
-    void StartDialogue()
-    {
+        dialogueBox.SetActive (true);
         index = 0;
+        textComponent.text = string.Empty;
         StartCoroutine(TypeLine());
     }
 
@@ -76,9 +66,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("Dialogue", 1);
-            PlayerPrefs.Save();
-            gameObject.SetActive(false);
+            dialogueBox.SetActive(false);
         }
     }
 }
