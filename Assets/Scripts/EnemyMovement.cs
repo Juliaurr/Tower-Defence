@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    private Transform endPoint;
     public Rigidbody2D rb;
     public float moveSpeed = 2f;
     private Transform target;
@@ -14,10 +15,16 @@ public class EnemyMovement : MonoBehaviour
     {
         baseSpeed = moveSpeed;
         target = LevelManager.main.path[pathIndex];
+        endPoint = GameObject.FindGameObjectWithTag("EndPoint").transform;
     }
 
     private void Update()
     {
+        if (Vector3.Distance(transform.position, endPoint.position) < 0.1f)
+        {
+            EnemyReachedEnd();
+        }
+
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
             pathIndex++;
@@ -33,6 +40,15 @@ public class EnemyMovement : MonoBehaviour
                 target = LevelManager.main.path[pathIndex];
             }
         }
+    }
+
+    private void EnemyReachedEnd()
+    {
+        // Notify the GameManager that an enemy has gotten through
+        EnemiesThrough.Instance.EnemyGotThrough();
+
+        // Destroy the enemy or deactivate it
+        Destroy(gameObject);
     }
 
     private void FixedUpdate() 

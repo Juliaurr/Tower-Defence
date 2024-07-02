@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bfa1de3139e3824e95019d49504f9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPoint: {fileID: 2096737124437886375, guid: a65f48a85464f2f4bb45d1fd3c5747bf, type: 3}
   rb: {fileID: 345512705395364808}
   moveSpeed: 1.5
 --- !u!114 &-2212074343605302705
