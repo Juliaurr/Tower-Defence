@@ -1,31 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ContextMenu : MonoBehaviour
+public class ContextMenu : MonoBehaviour, IPointerExitHandler
 {
     public static ContextMenu Instance;
     public GameObject menuPanel;
     private Plot currentPlot;
-    private RectTransform menuRectTransform;
 
     private void Awake()
     {
         Instance = this;
         menuPanel.SetActive(false);
-        menuRectTransform = menuPanel.GetComponent<RectTransform>();
-    }
-
-    private void Update()
-    {
-        if (menuPanel.activeSelf && !IsMouseOverUI())
-        {
-            HideMenu();
-        }
     }
 
     public void ShowMenu(Plot plot, Vector3 position)
     {
+        if (menuPanel.activeSelf) return;
+
         currentPlot = plot;
         menuPanel.SetActive(true);
         menuPanel.transform.position = position;
@@ -38,19 +31,21 @@ public class ContextMenu : MonoBehaviour
 
     public void OnSellButton()
     {
-        BuildManager.main.SellTower(currentPlot);
         HideMenu();
+        BuildManager.main.SellTower(currentPlot);
     }
 
     public void OnSwitchButton()
     {
-        BuildManager.main.SwitchTower(currentPlot);
         HideMenu();
+        BuildManager.main.SwitchTower(currentPlot);
     }
 
-    private bool IsMouseOverUI()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        Vector2 localMousePosition = menuRectTransform.InverseTransformPoint(Input.mousePosition);
-        return menuRectTransform.rect.Contains(localMousePosition);
+        if (menuPanel.activeSelf)
+        {
+            HideMenu();
+        }
     }
 }

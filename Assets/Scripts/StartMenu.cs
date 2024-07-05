@@ -17,7 +17,7 @@ public class StartMenu : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Level 1");
         Time.timeScale = 1f;
     }
 
