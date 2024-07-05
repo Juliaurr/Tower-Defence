@@ -7,11 +7,21 @@ public class ContextMenu : MonoBehaviour
     public static ContextMenu Instance;
     public GameObject menuPanel;
     private Plot currentPlot;
+    private RectTransform menuRectTransform;
 
     private void Awake()
     {
         Instance = this;
         menuPanel.SetActive(false);
+        menuRectTransform = menuPanel.GetComponent<RectTransform>();
+    }
+
+    private void Update()
+    {
+        if (menuPanel.activeSelf && !IsMouseOverUI())
+        {
+            HideMenu();
+        }
     }
 
     public void ShowMenu(Plot plot, Vector3 position)
@@ -36,5 +46,11 @@ public class ContextMenu : MonoBehaviour
     {
         BuildManager.main.SwitchTower(currentPlot);
         HideMenu();
+    }
+
+    private bool IsMouseOverUI()
+    {
+        Vector2 localMousePosition = menuRectTransform.InverseTransformPoint(Input.mousePosition);
+        return menuRectTransform.rect.Contains(localMousePosition);
     }
 }
