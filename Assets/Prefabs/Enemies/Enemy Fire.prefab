@@ -183,9 +183,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: 320384355
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: -352536588, guid: d68c01d226947c943966b0a5081348d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -236,7 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bfa1de3139e3824e95019d49504f9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 2096737124437886375, guid: a65f48a85464f2f4bb45d1fd3c5747bf, type: 3}
   rb: {fileID: 345512705395364808}
   moveSpeed: 1.5
 --- !u!114 &-2212074343605302705

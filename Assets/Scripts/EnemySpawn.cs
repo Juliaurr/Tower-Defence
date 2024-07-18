@@ -8,6 +8,8 @@ public class EnemySpawn : MonoBehaviour
 {
     public static UnityEvent enemyKilled = new UnityEvent();
     public GameObject[] enemyPrefabs;
+    public GameObject bossPrefab;
+    public int maxWaves;
     public int baseEnemies = 8;
     public float enemiesPerSecond = 0.5f;
     public float timeBetweenWaves = 5f;
@@ -65,6 +67,11 @@ public class EnemySpawn : MonoBehaviour
         Instantiate(prefabToSpawn, LevelManager.main.startPoint[0].position, Quaternion.identity);
     }
 
+    private void SpawnBoss()
+    {
+        Instantiate(bossPrefab, LevelManager.main.startPoint[0].position, Quaternion.identity);
+    }
+
     private IEnumerator StartWave()
     {
         yield return new WaitForSeconds(timeBetweenWaves);
@@ -85,9 +92,18 @@ public class EnemySpawn : MonoBehaviour
         if (currentWave == waveToShowDialogue)
         {
             Dialogue.instance.StartDialogue();
+            StartCoroutine(DelayBoss());
         }
+        else
+        {
+            StartCoroutine(StartWave());
+        }
+    }
 
-        StartCoroutine(StartWave());
+    IEnumerator DelayBoss()
+    {
+        yield return new WaitForSeconds(3);
+        SpawnBoss();
     }
 
     private int EnemiesPerWave()
