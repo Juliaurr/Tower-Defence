@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6134513343837626187}
   - component: {fileID: 7057837540970251245}
   - component: {fileID: 3223985058612066531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PopUpText
   m_TagString: Untagged
   m_Icon: {fileID: 0}

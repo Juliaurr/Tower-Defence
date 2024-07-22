@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class EnemiesThrough : MonoBehaviour
 {
     public static EnemiesThrough Instance;
-    public TextMeshProUGUI enemyCountText; // Reference to the TextMeshProUGUI component
+    public Text enemyCountText; // Reference to the TextMeshProUGUI component
     public GameObject gameOverScreen; // Reference to the Game Over screen UI
 
     private int enemiesThrough = 0;

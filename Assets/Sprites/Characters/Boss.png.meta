@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a785833873267264eb6c253b7cf73053
+guid: fdfd93b31086e744d849d4e19f6f0b8a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock-Sheet_0
+      name: Boss_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 120
+        width: 128
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17d7bc09262dd8540900bad6fbb4e8a9
-      internalID: 1182778584
+      spriteID: 1395b2263a81c5f40880b835ab4799e3
+      internalID: -1383654092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rock-Sheet_1
+      name: Boss_1
       rect:
         serializedVersion: 2
-        x: 202
+        x: 128
         y: 0
-        width: 200
-        height: 120
+        width: 128
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d96343b648d80ca4c89fe6d886b510b0
-      internalID: -2128410567
+      spriteID: 95b641ccab6f2ee469b2da55e564fe6e
+      internalID: 1094121919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rock-Sheet_2
+      name: Boss_2
       rect:
         serializedVersion: 2
-        x: 400
+        x: 256
         y: 0
-        width: 200
-        height: 120
+        width: 128
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b73d6f6bca34d2444952c89cf9884385
-      internalID: 946753176
+      spriteID: e08fa9b329ca9354da2c364073909436
+      internalID: 675807378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rock-Sheet_3
+      name: Boss_3
       rect:
         serializedVersion: 2
-        x: 600
+        x: 384
         y: 0
-        width: 200
-        height: 120
+        width: 128
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d2ff07c80fae09479e9812e95403ab5
-      internalID: -1695517313
+      spriteID: 9154d32f6307e89479fa59dac9d84fad
+      internalID: 1253782236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rock-Sheet_4
+      name: Boss_4
       rect:
         serializedVersion: 2
-        x: 800
+        x: 512
         y: 0
-        width: 200
-        height: 120
+        width: 128
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f35caca7d65f71645a13924f4dc9e2f0
-      internalID: 1093695187
+      spriteID: 16631656f338e684a97c8980af3dece8
+      internalID: -1015018998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_5
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 128
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835e7f1a77f24514fb4eb7b97f133945
+      internalID: 1024060891
       vertices: []
       indices: 
       edges: []
@@ -238,11 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rock-Sheet_0: 1182778584
-      rock-Sheet_1: -2128410567
-      rock-Sheet_2: 946753176
-      rock-Sheet_3: -1695517313
-      rock-Sheet_4: 1093695187
+      Boss_0: -1383654092
+      Boss_1: 1094121919
+      Boss_2: 675807378
+      Boss_3: 1253782236
+      Boss_4: -1015018998
+      Boss_5: 1024060891
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

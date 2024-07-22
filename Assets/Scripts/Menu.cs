@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    public TextMeshProUGUI currencyUI;
+    public Text currencyUI;
     public Animator animator;
     private bool isShopOpen = true;
 

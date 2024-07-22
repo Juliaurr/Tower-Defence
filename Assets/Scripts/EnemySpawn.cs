@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,7 +14,7 @@ public class EnemySpawn : MonoBehaviour
     public float enemiesPerSecond = 0.5f;
     public float timeBetweenWaves = 5f;
     public float difficultyScalingFactor = 0.75f;
-    public TextMeshProUGUI waveText; // Text element to display the wave progress
+    public Text waveText; // Text element to display the wave progress
     private int currentWave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
@@ -102,7 +102,7 @@ public class EnemySpawn : MonoBehaviour
 
     IEnumerator DelayBoss()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         SpawnBoss();
     }
 

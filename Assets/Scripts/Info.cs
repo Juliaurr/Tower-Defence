@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 using System;
 
 public class Info : MonoBehaviour
 {
-    public TextMeshProUGUI infoText;
+    public Text infoText;
 
     void Start()
     {
