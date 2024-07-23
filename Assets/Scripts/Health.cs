@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -53,6 +54,12 @@ public class Health : MonoBehaviour
             break;
             case TurretElement.Earth:
             hitPoints -= damage;
+            break;
+            default:
+            if (element == TurretElement.Boss)
+            {
+                hitPoints -= damage;
+            }
             break;
         }
         

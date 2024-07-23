@@ -357,6 +357,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8062788168379702439, guid: abc6523cb4627c7419ddaf9174eaae11, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8759843406705259480, guid: abc6523cb4627c7419ddaf9174eaae11, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -5,7 +5,7 @@ using UnityEditor;
 
 public enum TurretElement
 {
-    Fire, Water, Ice, Earth
+    Fire, Water, Ice, Earth, Boss
 };
 
 public class Turret : MonoBehaviour

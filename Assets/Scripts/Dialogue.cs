@@ -42,6 +42,7 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
+        AudioManager.instance.PauseMusic();
         dialogueBox.SetActive (true);
         index = 0;
         textComponent.text = string.Empty;

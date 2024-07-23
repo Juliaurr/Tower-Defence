@@ -16,6 +16,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start() 
     {
+        AudioManager.instance.PlayMusic("CombatMusic");
+        AudioManager.instance.SetMusicVolume(0.2f);
         currency = 200;
     }
 
