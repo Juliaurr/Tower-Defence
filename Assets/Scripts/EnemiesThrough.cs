@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class EnemiesThrough : MonoBehaviour
 {
     public static EnemiesThrough Instance;
-    public Text enemyCountText; // Reference to the TextMeshProUGUI component
-    public GameObject gameOverScreen; // Reference to the Game Over screen UI
+    public Text enemyCountText;
+    public GameObject gameOverScreen;
 
     private int enemiesThrough = 0;
-    private int maxEnemies = 10;
+    private int maxEnemies = 5;
 
     private void Awake()
     {

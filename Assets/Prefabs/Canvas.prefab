@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6611965892615395003}
   - component: {fileID: 8062788168379702439}
   - component: {fileID: 3189018180269444784}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,8 +59,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: 320384355
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &8062788168379702439
 MonoBehaviour:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 247
 --- !u!1 &5172025028413215497
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9055681140707606049}
   - component: {fileID: 4792023674015648072}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 1864604389263340345}
   - component: {fileID: 3529624008262299191}
   - component: {fileID: 3351888166960175867}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 3365273495132927504}
   - component: {fileID: 7574731913634357648}
   - component: {fileID: 4883872418653240358}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,6 @@ public class EnemySpawn : MonoBehaviour
     public static UnityEvent enemyKilled = new UnityEvent();
     public GameObject[] enemyPrefabs;
     public GameObject bossPrefab;
-    public int maxWaves;
     public int baseEnemies = 8;
     public float enemiesPerSecond = 0.5f;
     public float timeBetweenWaves = 5f;

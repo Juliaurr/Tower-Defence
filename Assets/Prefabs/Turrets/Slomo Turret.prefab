@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3006646759978709237}
   - component: {fileID: 7969458022113207048}
   - component: {fileID: -6219580718813042859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slomo Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4661139077007380444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
