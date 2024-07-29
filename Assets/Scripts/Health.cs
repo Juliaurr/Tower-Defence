@@ -13,6 +13,9 @@ public class Health : MonoBehaviour
     private int currencyWorth = 50;
     public TurretElement element;
     public GameObject popUpTextPrefab;
+    private float lastImmuneSoundTime = 0f; 
+    private float immuneSoundCooldown = 3f; 
+
 
     void Start()
     {
@@ -23,6 +26,13 @@ public class Health : MonoBehaviour
     {
         if (element == turretelement)
         {
+            // Check if the cooldown period has passed before playing the sound
+            if (Time.time >= lastImmuneSoundTime + immuneSoundCooldown)
+            {
+                AudioManager.instance.PlaySound("Immune");
+                AudioManager.instance.SetSoundVolume(0.1f);
+                lastImmuneSoundTime = Time.time; // Update the last played time
+            }
             Instantiate(popUpTextPrefab, transform);
             return;
         }
@@ -67,6 +77,11 @@ public class Health : MonoBehaviour
 
         if (hitPoints <= 0 && !isDestroyed)
         {
+            if (tag == "Boss" && LevelManager.main.bossHasSpawned)
+            {
+                LevelManager.main.isBossAlive = false;
+            }
+
             EnemySpawn.enemyKilled.Invoke();
             LevelManager.main.IncreaseCurrency(currencyWorth);
             isDestroyed = true;

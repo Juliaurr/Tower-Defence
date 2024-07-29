@@ -45,6 +45,10 @@ public class EnemyMovement : MonoBehaviour
     private void EnemyReachedEnd()
     {
         // Notify the GameManager that an enemy has gotten through
+        if (tag == "Boss")
+        {
+            EnemiesThrough.Instance.boss++;
+        }
         EnemiesThrough.Instance.EnemyGotThrough();
 
         // Destroy the enemy or deactivate it

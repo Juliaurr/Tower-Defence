@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemiesThrough : MonoBehaviour
 {
     public static EnemiesThrough Instance;
-    public Text enemyCountText;
+    public TextMeshProUGUI enemyCountText;
     public GameObject gameOverScreen;
-
     private int enemiesThrough = 0;
     private int maxEnemies = 5;
+    public int boss = 0;
 
     private void Awake()
     {
-        // Ensure only one instance of GameManager exists
         if (Instance == null)
         {
             Instance = this;
@@ -28,11 +27,17 @@ public class EnemiesThrough : MonoBehaviour
     private void Start()
     {
         UpdateEnemyCountText();
-        gameOverScreen.SetActive(false); // Ensure game over screen is hidden at the start
+        gameOverScreen.SetActive(false);
     }
 
     public void EnemyGotThrough()
     {
+        if (boss == 1)
+        {
+            GameOver();
+            return;
+        }
+
         enemiesThrough++;
         UpdateEnemyCountText();
 
@@ -49,7 +54,8 @@ public class EnemiesThrough : MonoBehaviour
 
     private void GameOver()
     {
-        // Show game over screen
+        AudioManager.instance.PauseMusic();
         gameOverScreen.SetActive(true);
+
     }
 }

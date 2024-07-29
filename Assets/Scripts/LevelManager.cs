@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -7,7 +8,10 @@ public class LevelManager : MonoBehaviour
     public static LevelManager main;
     public Transform[] startPoint;
     public Transform[] path;
+    public GameObject victoryScreen;
     public int currency;
+    public bool bossHasSpawned = false;
+    public bool isBossAlive = false;
 
     private void Awake() 
     {
@@ -18,6 +22,7 @@ public class LevelManager : MonoBehaviour
     {
         AudioManager.instance.PlayMusic("CombatMusic");
         AudioManager.instance.SetMusicVolume(0.2f);
+        victoryScreen.SetActive(false);
         currency = 200;
     }
 
@@ -37,6 +42,15 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("Not enough money.");
             return false;
+        }
+    }
+
+    void Update()
+    {
+        if (bossHasSpawned && !isBossAlive)
+        {
+            victoryScreen.SetActive(true);
+            AudioManager.instance.PauseMusic();
         }
     }
 }

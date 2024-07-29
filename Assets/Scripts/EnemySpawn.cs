@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class EnemySpawn : MonoBehaviour
     public float enemiesPerSecond = 0.5f;
     public float timeBetweenWaves = 5f;
     public float difficultyScalingFactor = 0.75f;
-    public Text waveText; // Text element to display the wave progress
+    public TextMeshProUGUI waveText;
     private int currentWave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
@@ -68,6 +68,8 @@ public class EnemySpawn : MonoBehaviour
 
     private void SpawnBoss()
     {
+        LevelManager.main.bossHasSpawned = true;
+        LevelManager.main.isBossAlive = true;
         Instantiate(bossPrefab, LevelManager.main.startPoint[0].position, Quaternion.identity);
         LevelManager.main.currency = 600;
         AudioManager.instance.PlayMusic("BossMusic");

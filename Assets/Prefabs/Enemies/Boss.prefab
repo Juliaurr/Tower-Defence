@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 5231964940061601935}
   m_Layer: 6
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 8131106245825279254}
   hitPoints: 0
-  maxHitPoints: 45
+  maxHitPoints: 50
   element: 4
   popUpTextPrefab: {fileID: 7742827707567399939, guid: 557004cb09c6dd74399ddf506a756545, type: 3}
 --- !u!95 &834798280888317406
