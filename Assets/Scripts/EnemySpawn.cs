@@ -71,9 +71,7 @@ public class EnemySpawn : MonoBehaviour
         LevelManager.main.bossHasSpawned = true;
         LevelManager.main.isBossAlive = true;
         Instantiate(bossPrefab, LevelManager.main.startPoint[0].position, Quaternion.identity);
-        LevelManager.main.currency = 600;
         AudioManager.instance.PlayMusic("BossMusic");
-        AudioManager.instance.SetMusicVolume(0.2f);
     }
 
     private IEnumerator StartWave()

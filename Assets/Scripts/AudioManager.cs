@@ -82,9 +82,16 @@ public class AudioManager : MonoBehaviour
     public void PauseMusic()
     {
         if (musicSource.isPlaying)
-
         {
             musicSource.Pause();
+        }
+    }
+
+    public void StopMusic()
+    {
+        if (musicSource.isPlaying)
+        {
+            musicSource.Stop();
         }
     }
 

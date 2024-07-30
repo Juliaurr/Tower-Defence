@@ -30,7 +30,6 @@ public class Health : MonoBehaviour
             if (Time.time >= lastImmuneSoundTime + immuneSoundCooldown)
             {
                 AudioManager.instance.PlaySound("Immune");
-                AudioManager.instance.SetSoundVolume(0.1f);
                 lastImmuneSoundTime = Time.time; // Update the last played time
             }
             Instantiate(popUpTextPrefab, transform);

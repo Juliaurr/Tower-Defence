@@ -20,8 +20,6 @@ public class LevelManager : MonoBehaviour
 
     private void Start() 
     {
-        AudioManager.instance.PlayMusic("CombatMusic");
-        AudioManager.instance.SetMusicVolume(0.2f);
         victoryScreen.SetActive(false);
         currency = 200;
     }
@@ -50,7 +48,7 @@ public class LevelManager : MonoBehaviour
         if (bossHasSpawned && !isBossAlive)
         {
             victoryScreen.SetActive(true);
-            AudioManager.instance.PauseMusic();
+            AudioManager.instance.StopMusic();
         }
     }
 }

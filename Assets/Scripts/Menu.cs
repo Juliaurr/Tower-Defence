@@ -40,12 +40,12 @@ public class Menu : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             AudioManager.instance.PlaySound("Click");
-            AudioManager.instance.SetSoundVolume(0.1f);
         }
     }
 
     public void PlayGame()
     {
+        AudioManager.instance.PlayMusic("CombatMusic");
         SceneManager.LoadScene("Level 1");
         Time.timeScale = 1f;
         isPaused = false;
@@ -86,6 +86,7 @@ public class Menu : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
+        AudioManager.instance.StopMusic();
         SceneManager.LoadScene("Menu");
     }
 
@@ -96,6 +97,7 @@ public class Menu : MonoBehaviour
 
     public void Retry()
     {
+        AudioManager.instance.PlayMusic("CombatMusic");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
 
