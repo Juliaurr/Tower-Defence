@@ -52,10 +52,16 @@ public class EnemiesThrough : MonoBehaviour
         enemyCountText.text = "Enemies got through: " + enemiesThrough + "/" + maxEnemies;
     }
 
+    bool soundPlayed = false;
+
     private void GameOver()
     {
-        AudioManager.instance.PauseMusic();
-        gameOverScreen.SetActive(true);
-
+        if (!soundPlayed)
+        {
+            gameOverScreen.SetActive(true);
+            AudioManager.instance.PauseMusic();
+            AudioManager.instance.PlaySound("GameOver");
+            soundPlayed = true;
+        }
     }
 }

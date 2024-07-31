@@ -27,6 +27,7 @@ public class HoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         Vector2 position = transform.position + new Vector3(0, GetComponent<RectTransform>().rect.height, 0);
         if (show)
         {
+            AudioManager.instance.PlaySound("UIHover");
             infoBox.ShowInfo(itemInfo, position);
         }
         else

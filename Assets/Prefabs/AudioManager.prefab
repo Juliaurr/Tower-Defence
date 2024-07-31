@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5510570442935920753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1207770647535227907}
+  - component: {fileID: 5138944799331024490}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1207770647535227907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5510570442935920753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 917.675, y: 621.4286, z: -3.7525368}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5138944799331024490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5510570442935920753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2d12e1090eab74e85d9ca193106bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 079c2c081d3a6e845b1ef15ca8727aa5, type: 3}
+  - {fileID: 8300000, guid: cb8b2e444f34b5a498071039f75bd9aa, type: 3}
+  - {fileID: 8300000, guid: 5aad1bf7556138c41a400b586363b2c4, type: 3}
+  - {fileID: 8300000, guid: 90f7fa2d005d5144d981ff230f6b2db8, type: 3}
+  - {fileID: 8300000, guid: 0eb2952c4269fd94fb4c4c0711821974, type: 3}
+  - {fileID: 8300000, guid: 59de33d1a32722f4f8a871763066ac47, type: 3}
+  soundNames:
+  - Immune
+  - Click
+  - TowerPlaced
+  - UIHover
+  - Victory
+  - GameOver
+  musicTracks:
+  - {fileID: 8300000, guid: 4869a045a834dcf428e545c8d0241f6c, type: 3}
+  - {fileID: 8300000, guid: 7847efad8fed1494ba29ce90b6d2fc5e, type: 3}
+  musicNames:
+  - CombatMusic
+  - BossMusic

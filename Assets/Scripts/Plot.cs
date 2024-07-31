@@ -47,6 +47,7 @@ public class Plot : MonoBehaviour
 
         LevelManager.main.SpendCurrency(towerToBuild.cost);
 
+        AudioManager.instance.PlaySound("TowerPlaced");
         tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
         towerOnPlot = towerToBuild;
         BuildManager.main.towerCount++;

@@ -43,12 +43,16 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    bool soundPlayed = false;
+
     void Update()
     {
-        if (bossHasSpawned && !isBossAlive)
+        if (bossHasSpawned && !isBossAlive && !soundPlayed)
         {
             victoryScreen.SetActive(true);
             AudioManager.instance.StopMusic();
+            AudioManager.instance.PlaySound("Victory");
+            soundPlayed = true;
         }
     }
 }
