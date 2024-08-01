@@ -339,10 +339,10 @@ MonoBehaviour:
   - {fileID: 4325063714219538570, guid: d9a1ca311b6bca3448a59298e79d2274, type: 3}
   - {fileID: 4325063714219538570, guid: 9528350a6ace9b34c82b0a007b428192, type: 3}
   bossPrefab: {fileID: 4325063714219538570, guid: 50320392471562e429f11f3d9a726d0f, type: 3}
-  baseEnemies: 3
+  baseEnemies: 5
   enemiesPerSecond: 0.5
   timeBetweenWaves: 3
-  difficultyScalingFactor: 0.75
+  difficultyScalingFactor: 0.5
   waveText: {fileID: 227245561}
   waveToShowDialogue: 5
 --- !u!114 &148582854

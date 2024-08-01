@@ -87,10 +87,8 @@ public class EnemySpawn : MonoBehaviour
         timeSinceLastSpawn = 0f;
         currentWave++;
 
-        // Update wave text
         UpdateWaveText();
 
-        // Check if it's time to show the dialogue
         if (currentWave == waveToShowDialogue)
         {
             Dialogue.instance.StartDialogue();
